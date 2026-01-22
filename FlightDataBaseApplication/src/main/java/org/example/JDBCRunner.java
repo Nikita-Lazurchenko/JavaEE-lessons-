@@ -11,8 +11,7 @@ import java.util.List;
 
 public class JDBCRunner {
     public static void main(String[] args) {
-        try(var connection = ConnectionManager.open()){
-
+        try(var connection = ConnectionManager.get()){
             System.out.println(connection.getTransactionIsolation());
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -30,7 +29,7 @@ public class JDBCRunner {
                         WHERE flight_id = ?;
                         """;
 
-        try(var connection = ConnectionManager.open();
+        try(var connection = ConnectionManager.get();
             var statement = connection.prepareStatement(sql))
         {
             statement.setInt(1, flightId);
@@ -52,7 +51,7 @@ public class JDBCRunner {
                 WHERE departure_date >= ? AND departure_date <= ?;
                 """;
 
-        try(var connection = ConnectionManager.open();
+        try(var connection = ConnectionManager.get();
             var statement = connection.prepareStatement(sql))
         {
             statement.setTimestamp(1, Timestamp.valueOf(start));
