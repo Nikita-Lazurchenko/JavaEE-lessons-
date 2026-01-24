@@ -1,69 +1,31 @@
 package org.example;
 
-import org.example.utils.ConnectionManager;
+import org.example.dao.TicketDao;
+import org.example.dto.TicketFilter;
+import org.example.entity.Ticket;
 
-import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Optional;
+
 
 public class JDBCRunner {
     public static void main(String[] args) {
-        try(var connection = ConnectionManager.get()){
-            System.out.println(connection.getTransactionIsolation());
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
+        TicketDao ticketDao = TicketDao.getInstance();
+        TicketFilter ticketFilter = new TicketFilter("Alexander Duggan", 5 , 15,0);
+//        Ticket ticket = new Ticket();
+//        ticket.setPassportNumber("AB7654321");
+//        ticket.setPassengerName("Alexander Duggan");
+//        ticket.setFlightId(3);
+//        ticket.setSeatNumber(45);
+//        ticket.setCost(7000);
 
-        System.out.println(getTicketByFlightId(1));
-        System.out.println(getFlightsBetween(LocalDate.of(2026,2,1).atStartOfDay(),
-                LocalDate.of(2026,2,5).atStartOfDay()));
+//        System.out.println(ticketDao.save(ticket));
+//        System.out.println(ticketDao.delete(9));
+//        Ticket ticket = ticketDao.findById(2).get();
+//        System.out.println(ticket);
+//        ticket.setSeatNumber(5);
+//        System.out.println(ticketDao.update(ticket));
+//        System.out.println(ticketDao.findById(2).get());
+        System.out.println(ticketDao.findAll());
     }
 
-    public static List<Long> getTicketByFlightId(int flightId) {
-        List<Long> tickets = new ArrayList<>();
-        String sql = """
-                        SELECT * FROM ticket
-                        WHERE flight_id = ?;
-                        """;
-
-        try(var connection = ConnectionManager.get();
-            var statement = connection.prepareStatement(sql))
-        {
-            statement.setInt(1, flightId);
-            var result = statement.executeQuery();
-            while(result.next()){
-                tickets.add(result.getLong("id"));
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return tickets;
-    }
-
-    public static List<Long> getFlightsBetween(LocalDateTime start, LocalDateTime end) {
-        List<Long> flights = new ArrayList<>();
-
-        String sql = """
-                SELECT * FROM flight 
-                WHERE departure_date >= ? AND departure_date <= ?;
-                """;
-
-        try(var connection = ConnectionManager.get();
-            var statement = connection.prepareStatement(sql))
-        {
-            statement.setTimestamp(1, Timestamp.valueOf(start));
-            statement.setTimestamp(2,Timestamp.valueOf(end));
-            var result = statement.executeQuery();
-            while(result.next()){
-                flights.add(result.getLong("id"));
-            }
-
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return flights;
-    }
 }
