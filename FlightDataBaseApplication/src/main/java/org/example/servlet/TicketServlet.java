@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.example.dao.TicketDao;
 import org.example.service.TicketService;
+import org.example.utils.JSPHelper;
 
 import java.io.IOException;
 
@@ -20,14 +21,9 @@ public class TicketServlet extends HttpServlet {
         resp.setCharacterEncoding("UTF-8");
 
         Integer id  = Integer.valueOf(req.getParameter("id"));
-        try(var writer = resp.getWriter();){
-            writer.write("<h1>Список билетов:</h1>");
-            writer.write("<ul>");
-            ticketService.findAllByFlightId(id).stream().forEach(flightDto ->
-                    writer.write("<li>%s место: %s</li>".formatted(flightDto.passengerName(),flightDto.seatNumber()))
-            );
-            writer.write("</ul>");
-        }
+
+        req.setAttribute("tickets",ticketService.findAllByFlightId(id));
+        req.getRequestDispatcher(JSPHelper.getPath("tickets.jsp")).forward(req, resp);
 
     }
 }

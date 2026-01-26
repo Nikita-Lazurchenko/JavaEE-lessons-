@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.example.service.FlightService;
+import org.example.utils.JSPHelper;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -19,15 +20,18 @@ public class FlightServlet extends HttpServlet {
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
 
-        try (var writer = resp.getWriter()) {
-            writer.write("<h1>Список полетов</h1>");
-            writer.write("<ul>");
-            flightService.findAll().stream().forEach(flightDto -> {
-                writer.write("""
-                       <li><a href='/tickets?id=%s'>%s</li>
-                        """.formatted(flightDto.id(),flightDto.description()));
-            });
-            writer.write("</ul>");
-        }
+        req.setAttribute("flights",flightService.findAll());
+        req.getRequestDispatcher(JSPHelper.getPath("flights.jsp")).forward(req, resp);
+
+//        try (var writer = resp.getWriter()) {
+//            writer.write("<h1>Список полетов</h1>");
+//            writer.write("<ul>");
+//            flightService.findAll().stream().forEach(flightDto -> {
+//                writer.write("""
+//                       <li><a href='/tickets?id=%s'>%s</li>
+//                        """.formatted(flightDto.id(),flightDto.description()));
+//            });
+//            writer.write("</ul>");
+//        }
     }
 }
