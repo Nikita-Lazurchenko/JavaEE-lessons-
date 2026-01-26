@@ -16,7 +16,16 @@ public final class ConnectionManager {
     private static int poolSize = 10;
 
     static{
+        loadDriver();
         initConnectionPool();
+    }
+
+    public static void loadDriver(){
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private static void initConnectionPool(){

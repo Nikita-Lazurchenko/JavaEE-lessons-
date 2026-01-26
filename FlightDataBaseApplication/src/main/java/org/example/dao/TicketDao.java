@@ -39,6 +39,8 @@ public class TicketDao implements DAO<Ticket,Integer>{
             WHERE id=?
             """;
 
+    private static String FIND_ALL_BY_FLIGHT_ID_SQL = FINAD_ALL_SQL + " WHERE flight_id=?";
+
     @Override
     public Ticket save(Ticket ticket){
         try(var connection = ConnectionManager.get();
@@ -169,6 +171,23 @@ public class TicketDao implements DAO<Ticket,Integer>{
             }
             return Optional.empty();
         }catch (SQLException e){
+            throw new DAOException(e);
+        }
+    }
+
+    public List<Ticket> findAllByFlightId(Integer flightId){
+        try(var connection = ConnectionManager.get();
+            var statement = connection.prepareStatement(FIND_ALL_BY_FLIGHT_ID_SQL)){
+            statement.setInt(1, flightId);
+
+            var resultSet = statement.executeQuery();
+            List<Ticket> tickets = new ArrayList<>();
+            while (resultSet.next()){
+                Flight flight = flightBuilder(resultSet);
+                tickets.add(ticketBuilder(resultSet, flight));
+            }
+            return tickets;
+        } catch (SQLException e) {
             throw new DAOException(e);
         }
     }
