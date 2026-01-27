@@ -22,16 +22,5 @@ public class FlightServlet extends HttpServlet {
 
         req.setAttribute("flights",flightService.findAll());
         req.getRequestDispatcher(JSPHelper.getPath("flights.jsp")).forward(req, resp);
-
-//        try (var writer = resp.getWriter()) {
-//            writer.write("<h1>Список полетов</h1>");
-//            writer.write("<ul>");
-//            flightService.findAll().stream().forEach(flightDto -> {
-//                writer.write("""
-//                       <li><a href='/tickets?id=%s'>%s</li>
-//                        """.formatted(flightDto.id(),flightDto.description()));
-//            });
-//            writer.write("</ul>");
-//        }
     }
 }
