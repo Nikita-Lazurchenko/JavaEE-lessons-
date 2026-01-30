@@ -17,9 +17,6 @@ import java.io.Serializable;
 @Builder
 @Embeddable
 public class PersonalInfo{
-//    @Serial
-//    private static final long serialVersionUID = -4148019503802061618L;
-
     private String firstName;
     private String lastName;
     @Convert(converter = BirthdayConverter.class)

@@ -1,28 +1,44 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.example.converter.BirthdayConverter;
+import lombok.*;
 
-import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
+@ToString(exclude = {"company","profile"})
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(of = "username")
 @Builder
 @Entity
 @Table(name = "users", schema = "public")
 public class User {
     @Id
-    @GeneratedValue(generator = "user_gen", strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(name = "user_gen", sequenceName = "users_id_seq_my" , allocationSize = 1)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String username;
-//    @EmbeddedId
+    @Embedded
     private PersonalInfo personalInfo;
     @Enumerated(EnumType.STRING)
     private Role role;
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name="company_id")
+    private Company company;
+
+    @OneToOne(mappedBy = "user",cascade = CascadeType.ALL)
+    private Profile profile;
+
+    @Builder.Default
+    @ManyToMany
+    @JoinTable(name = "users_chat",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "chat_id"))
+    private List<Chat> chats = new ArrayList<>();
+
+    public void addChat(Chat chat) {
+        chats.add(chat);
+        chat.getUsers().add(this);
+    }
 }

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="INFO">
+<Configuration status="ERROR">
     <Appenders>
-
-        <Console name="Console"
-                 target="SYSTEM_OUT">
+        <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
 
-        <File name           ="file"
-              fileName       ="src\main\resources\logs\hibernate-lesson.log">
-            <PatternLayout pattern="%d{yyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
-            <BurstFilter level="INFO" maxFileSize="10КВ" maxBackupIndex="10" append="true"/>
-        </File>
-
+        <RollingFile name="file"
+                     fileName="src/main/resources/logs/hibernate-lesson.log"
+                     filePattern="src/main/resources/logs/hibernate-lesson-%i.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="10KB" />
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
     </Appenders>
 
     <Loggers>

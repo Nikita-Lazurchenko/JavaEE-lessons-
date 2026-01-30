@@ -1,0 +1,97 @@
+2026-01-31 01:48:49.624 [main] DEBUG org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: 18.1
+2026-01-31 01:48:49.676 [main] DEBUG org.hibernate.orm.jdbc.lob - HHH10010004: Disabling contextual LOB creation as Dialect reported it is not supported
+2026-01-31 01:48:49.677 [main] DEBUG org.hibernate.orm.jdbc - HHH100122: Using default JDBC fetch size: 0
+2026-01-31 01:48:49.679 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: postgres/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-01-31 01:48:49.980 [main] DEBUG org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/postgres]
+2026-01-31 01:50:09.050 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2026-01-31 01:50:09.073 [main] DEBUG org.hibernate.orm.service - HHH010455: Adding integrator: org.hibernate.boot.beanvalidation.BeanValidationIntegrator
+2026-01-31 01:50:09.079 [main] DEBUG org.hibernate.orm.service - HHH010455: Adding integrator: org.hibernate.cache.internal.CollectionCacheInvalidator
+2026-01-31 01:50:09.105 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-01-31 01:50:09.106 [main] DEBUG org.hibernate.orm.core - HHH000206: 'hibernate.properties' not found
+2026-01-31 01:50:09.145 [main] WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2026-01-31 01:50:09.153 [main] DEBUG org.hibernate.orm.boot - HHH160204: cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2026-01-31 01:50:09.429 [main] WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2026-01-31 01:50:09.430 [main] DEBUG org.hibernate.orm.boot - HHH160204: cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2026-01-31 01:50:09.473 [main] DEBUG org.hibernate.orm.cache - HHH90001031: Cannot default RegionFactory since no RegionFactory strategies were registered
+2026-01-31 01:50:09.474 [main] DEBUG org.hibernate.orm.cache - HHH90001029: Second-level cache disabled
+2026-01-31 01:50:09.883 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-01-31 01:50:10.455 [main] DEBUG org.hibernate.orm.connections.pooling - HHH10001014: Initializing connection pool with 1 connections
+2026-01-31 01:50:10.831 [main] DEBUG org.hibernate.orm.jdbc - HHH100017: Database:
+	name: PostgreSQL
+	version: 18.1
+	major: 18
+	minor: 1
+2026-01-31 01:50:10.831 [main] DEBUG org.hibernate.orm.jdbc - HHH100018: Driver:
+	name: PostgreSQL JDBC Driver
+	version: 42.7.9
+	major: 42
+	minor: 7
+	JDBC version: 4.2
+2026-01-31 01:50:10.891 [main] DEBUG org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: 18.1
+2026-01-31 01:50:10.926 [main] DEBUG org.hibernate.orm.jdbc.lob - HHH10010004: Disabling contextual LOB creation as Dialect reported it is not supported
+2026-01-31 01:50:10.926 [main] DEBUG org.hibernate.orm.jdbc - HHH100122: Using default JDBC fetch size: 0
+2026-01-31 01:50:10.929 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: postgres/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-01-31 01:50:11.222 [main] DEBUG org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/postgres]
+2026-01-31 01:51:55.115 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2026-01-31 01:51:55.139 [main] DEBUG org.hibernate.orm.service - HHH010455: Adding integrator: org.hibernate.boot.beanvalidation.BeanValidationIntegrator
+2026-01-31 01:51:55.146 [main] DEBUG org.hibernate.orm.service - HHH010455: Adding integrator: org.hibernate.cache.internal.CollectionCacheInvalidator
+2026-01-31 01:51:55.172 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-01-31 01:51:55.174 [main] DEBUG org.hibernate.orm.core - HHH000206: 'hibernate.properties' not found
+2026-01-31 01:51:55.220 [main] WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2026-01-31 01:51:55.233 [main] DEBUG org.hibernate.orm.boot - HHH160204: cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2026-01-31 01:51:55.523 [main] WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2026-01-31 01:51:55.524 [main] DEBUG org.hibernate.orm.boot - HHH160204: cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2026-01-31 01:51:55.569 [main] DEBUG org.hibernate.orm.cache - HHH90001031: Cannot default RegionFactory since no RegionFactory strategies were registered
+2026-01-31 01:51:55.570 [main] DEBUG org.hibernate.orm.cache - HHH90001029: Second-level cache disabled
+2026-01-31 01:51:56.022 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-01-31 01:51:56.629 [main] DEBUG org.hibernate.orm.connections.pooling - HHH10001014: Initializing connection pool with 1 connections
+2026-01-31 01:51:56.997 [main] DEBUG org.hibernate.orm.jdbc - HHH100017: Database:
+	name: PostgreSQL
+	version: 18.1
+	major: 18
+	minor: 1
+2026-01-31 01:51:56.997 [main] DEBUG org.hibernate.orm.jdbc - HHH100018: Driver:
+	name: PostgreSQL JDBC Driver
+	version: 42.7.9
+	major: 42
+	minor: 7
+	JDBC version: 4.2
+2026-01-31 01:51:57.088 [main] DEBUG org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: 18.1
+2026-01-31 01:51:57.119 [main] DEBUG org.hibernate.orm.jdbc.lob - HHH10010004: Disabling contextual LOB creation as Dialect reported it is not supported
+2026-01-31 01:51:57.119 [main] DEBUG org.hibernate.orm.jdbc - HHH100122: Using default JDBC fetch size: 0
+2026-01-31 01:51:57.122 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: postgres/public
+	Autocommit mode: false
+	Isolation level: READ_COMMITTED
+	JDBC fetch size: none
+	Pool: DriverManagerConnectionProvider
+	Minimum pool size: 1
+	Maximum pool size: 20
+2026-01-31 01:51:57.820 [main] DEBUG org.hibernate.orm.factory - HHH90020001: Instantiating factory [edca1cda-6705-4e24-963e-35011f0d428c] with settings: {hibernate.format_sql=true, java.specification.version=23, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1251, java.class.path=C:\IntelliJ IDEA 2024.3\lib\idea_rt.jar;C:\IntelliJ IDEA 2024.3\plugins\junit\lib\junit5-rt.jar;C:\IntelliJ IDEA 2024.3\plugins\junit\lib\junit-rt.jar;E:\JavaEE(lessons)\Hibernate_lesson\target\test-classes;E:\JavaEE(lessons)\Hibernate_lesson\target\classes;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.2\junit-jupiter-api-5.11.2.jar;C:\Users\Admin\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-commons\1.11.2\junit-platform-commons-1.11.2.jar;C:\Users\Admin\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter\6.1.0-M1\junit-jupiter-6.1.0-M1.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-params\6.1.0-M1\junit-jupiter-params-6.1.0-M1.jar;C:\Users\Admin\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\6.1.0-M1\junit-jupiter-engine-6.1.0-M1.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-engine\6.1.0-M1\junit-platform-engine-6.1.0-M1.jar;C:\Users\Admin\.m2\repository\org\hibernate\orm\hibernate-core\7.3.0.CR1\hibernate-core-7.3.0.CR1.jar;C:\Users\Admin\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.2.0\jakarta.persistence-api-3.2.0.jar;C:\Users\Admin\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Admin\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\Admin\.m2\repository\org\hibernate\models\hibernate-models\1.0.1\hibernate-models-1.0.1.jar;C:\Users\Admin\.m2\repository\net\bytebuddy\byte-buddy\1.17.8\byte-buddy-1.17.8.jar;C:\Users\Admin\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.4\jakarta.xml.bind-api-4.0.4.jar;C:\Users\Admin\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.4\jakarta.activation-api-2.1.4.jar;C:\Users\Admin\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.6\jaxb-runtime-4.0.6.jar;C:\Users\Admin\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.6\jaxb-core-4.0.6.jar;C:\Users\Admin\.m2\repository\org\eclipse\angus\angus-activation\2.0.3\angus-activation-2.0.3.jar;C:\Users\Admin\.m2\repository\org\glassfish\jaxb\txw2\4.0.6\txw2-4.0.6.jar;C:\Users\Admin\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Admin\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Admin\.m2\repository\org\antlr\antlr4-runtime\4.13.2\antlr4-runtime-4.13.2.jar;C:\Users\Admin\.m2\repository\org\postgresql\postgresql\42.7.9\postgresql-42.7.9.jar;C:\Users\Admin\.m2\repository\org\checkerframework\checker-qual\3.52.0\checker-qual-3.52.0.jar;C:\Users\Admin\.m2\repository\org\projectlombok\lombok\1.18.42\lombok-1.18.42.jar;C:\Users\Admin\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.25.3\log4j-slf4j2-impl-2.25.3.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.3\log4j-api-2.25.3.jar;C:\Users\Admin\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.3\log4j-core-2.25.3.jar, kotlinx.coroutines.debug.enable.mutable.state.flows.stack.trace=true, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, user.variant=, java.vendor.url=https://java.oracle.com/, user.timezone=Europe/Moscow, java.vm.specification.version=23, os.name=Windows 10, sun.java.launcher=SUN_STANDARD, user.country=RU, sun.boot.library.path=C:\Program Files\Java\jdk-23\bin, sun.java.command=com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit4 org.example.HibernateRunnerTest,checkManyToMany, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\Admin, user.language=ru, sun.stderr.encoding=UTF-8, java.specification.vendor=Oracle Corporation, java.version.date=2024-10-15, java.home=C:\Program Files\Java\jdk-23, file.separator=\, java.vm.compressedOopsMode=Zero based, sun.stdout.encoding=UTF-8, line.separator=
+, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, intellij.debug.agent=true, user.script=, connection.password=787898, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=23.0.1+11-39, user.name=Admin, stdout.encoding=UTF-8, path.separator=;, kotlinx.coroutines.debug.enable.creation.stack.trace=false, hibernate.connection.username=****, os.version=10.0, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:postgresql://localhost:5432/postgres, file.encoding=UTF-8, format_sql=true, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, show_sql=true, hibernate.connection.driver_class=org.postgresql.Driver, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\Admin\AppData\Local\Temp\, java.version=23.0.1, jboss.modules.system.pkgs=com.intellij.rt, user.dir=E:\JavaEE(lessons)\Hibernate_lesson, os.arch=amd64, connection.username=postgres, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, sun.os.patch.level=, connection.driver_class=org.postgresql.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@f171912, native.encoding=Cp1251, kotlinx.coroutines.debug.enable.flows.stack.trace=true, java.library.path=C:\Program Files\Java\jdk-23\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk-23\bin;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files\apache-maven-3.9.12\bin;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\IntelliJ IDEA 2024.3\bin;;C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yuccastream.tuna_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Program Files\apache-maven-3.9.12\bin\;;., stderr.encoding=UTF-8, java.vendor=Oracle Corporation, java.vm.info=mixed mode, sharing, java.vm.version=23.0.1+11-39, java.rmi.server.randomIDs=true, sun.io.unicode.encoding=UnicodeLittle, connection.url=jdbc:postgresql://localhost:5432/postgres, java.class.version=67.0, debugger.agent.enable.coroutines=true}

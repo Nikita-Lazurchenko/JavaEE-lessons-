@@ -1,0 +1,149 @@
+2026-01-31 01:04:38.605 [main] DEBUG org.hibernate.orm.core - HHH000513: Unable to create the ReflectionOptimizer for [org.example.entity.Company]: private accessor [name]
+2026-01-31 01:04:38.639 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.User.profile' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-01-31 01:04:38.639 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.User.profile' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-01-31 01:04:38.659 [main] DEBUG org.hibernate.orm.core - HHH000513: Unable to create the ReflectionOptimizer for [org.example.entity.User]: private accessor [company]
+2026-01-31 01:04:38.660 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.User.profile' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-01-31 01:04:38.661 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.Profile.user' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-01-31 01:04:38.662 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.Profile.user' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-01-31 01:04:38.679 [main] DEBUG org.hibernate.orm.core - HHH000513: Unable to create the ReflectionOptimizer for [org.example.entity.Profile]: private accessor [language]
+2026-01-31 01:04:38.680 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.Profile.user' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-01-31 01:04:39.014 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-31 01:04:39.022 [main] DEBUG org.hibernate.orm.service - HHH010454: EventListenerRegistry access via ServiceRegistry is deprecated - use 'sessionFactory.getEventEngine().getListenerRegistry()' instead
+2026-01-31 01:04:39.024 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema actions specified for contributor 'orm'
+2026-01-31 01:04:39.024 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema management actions found
+2026-01-31 01:04:39.026 [main] DEBUG org.hibernate.orm.factoryRegistry - HHH020384: Registering SessionFactory [f6ec1e6c-aa30-4ead-9331-3deca8f1e4a3] (<unnamed>)
+2026-01-31 01:04:39.026 [main] DEBUG org.hibernate.orm.core - HHH006588: Opening session [tenant=null]
+2026-01-31 01:04:39.072 [main] DEBUG org.hibernate.orm.core - HHH006583: Beginning transaction
+2026-01-31 01:04:39.117 [main] DEBUG org.hibernate.SQL - 
+    SELECT
+        * 
+    FROM
+        users
+2026-01-31 01:04:39.136 [main] DEBUG org.hibernate.orm.results - Disallowing positional selections: SELECT * FROM users
+2026-01-31 01:04:39.172 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.language,
+        p1_0.street,
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.birthday,
+        u1_0.firstName,
+        u1_0.lastName,
+        u1_0.role,
+        u1_0.username 
+    from
+        public.profile p1_0 
+    left join
+        public.users u1_0 
+            on u1_0.id=p1_0.user_id 
+    where
+        p1_0.user_id=?
+2026-01-31 01:04:39.188 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.language,
+        p1_0.street,
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.birthday,
+        u1_0.firstName,
+        u1_0.lastName,
+        u1_0.role,
+        u1_0.username 
+    from
+        public.profile p1_0 
+    left join
+        public.users u1_0 
+            on u1_0.id=p1_0.user_id 
+    where
+        p1_0.user_id=?
+2026-01-31 01:04:39.189 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.language,
+        p1_0.street,
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.birthday,
+        u1_0.firstName,
+        u1_0.lastName,
+        u1_0.role,
+        u1_0.username 
+    from
+        public.profile p1_0 
+    left join
+        public.users u1_0 
+            on u1_0.id=p1_0.user_id 
+    where
+        p1_0.user_id=?
+2026-01-31 01:04:39.207 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        public.profile
+        (language, street, user_id) 
+    values
+        (?, ?, ?)
+2026-01-31 01:04:39.220 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        public.profile
+        (language, street, user_id) 
+    values
+        (?, ?, ?)
+2026-01-31 01:04:39.221 [main] DEBUG org.hibernate.SQL - 
+    insert 
+    into
+        public.profile
+        (language, street, user_id) 
+    values
+        (?, ?, ?)
+2026-01-31 01:04:39.222 [main] DEBUG org.hibernate.orm.core - HHH006584: Committing transaction
+2026-01-31 01:04:39.229 [main] DEBUG org.hibernate.orm.event - HHH90060071: Flushed: 0 insertions, 0 updates, 0 deletions to 6 objects
+2026-01-31 01:04:39.229 [main] DEBUG org.hibernate.orm.event - HHH90060072: Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
+2026-01-31 01:04:39.230 [main] DEBUG org.hibernate.orm.core - Listing entities:
+2026-01-31 01:04:39.231 [main] DEBUG org.hibernate.orm.core - org.example.entity.Profile{street=Независимости 34, language=UA, id=3, user=org.example.entity.User#4}
+2026-01-31 01:04:39.233 [main] DEBUG org.hibernate.orm.core - org.example.entity.User{personalInfo=component[birthday,firstName,lastName]{birthday=Birthday[birthday=1978-02-23], firstName=Andrey, lastName=Petrov}, role=USER, profile=org.example.entity.Profile#2, company=<uninitialized>, id=3, username=example@gmail.com}
+2026-01-31 01:04:39.233 [main] DEBUG org.hibernate.orm.core - org.example.entity.User{personalInfo=component[birthday,firstName,lastName]{birthday=Birthday[birthday=1986-04-12], firstName=Charlies, lastName=Calthrop}, role=USER, profile=org.example.entity.Profile#3, company=<uninitialized>, id=4, username=spanish@gmail.com}
+2026-01-31 01:04:39.233 [main] DEBUG org.hibernate.orm.core - org.example.entity.Profile{street=Мира 14, language=RU, id=1, user=org.example.entity.User#2}
+2026-01-31 01:04:39.233 [main] DEBUG org.hibernate.orm.core - org.example.entity.Profile{street=Свободы 67, language=ML, id=2, user=org.example.entity.User#3}
+2026-01-31 01:04:39.234 [main] DEBUG org.hibernate.orm.core - org.example.entity.User{personalInfo=component[birthday,firstName,lastName]{birthday=Birthday[birthday=1988-07-12], firstName=Anton, lastName=Ivanov}, role=USER, profile=org.example.entity.Profile#1, company=<uninitialized>, id=2, username=poshta@gmail.com}
+2026-01-31 01:04:39.252 [main] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	35100 ns acquiring 1 JDBC connections
+	34600 ns releasing 1 JDBC connections
+	3135500 ns preparing 7 JDBC statements
+	23821000 ns executing 7 JDBC statements
+	0 ns executing 0 JDBC batches
+	0 ns performing 0 second-level cache puts
+	0 ns performing 0 second-level cache hits
+	0 ns performing 0 second-level cache misses
+	11486700 ns executing 1 flushes (flushing a total of 6 entities and 0 collections)
+	0 ns executing 0 pre-partial-flushes
+	240600 ns executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+
+2026-01-31 01:04:39.252 [main] DEBUG org.hibernate.orm.factory - HHH90020005: Closing factory [f6ec1e6c-aa30-4ead-9331-3deca8f1e4a3]
+2026-01-31 01:04:39.253 [main] DEBUG org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/postgres]
+2026-01-31 01:48:47.733 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2026-01-31 01:48:47.757 [main] DEBUG org.hibernate.orm.service - HHH010455: Adding integrator: org.hibernate.boot.beanvalidation.BeanValidationIntegrator
+2026-01-31 01:48:47.763 [main] DEBUG org.hibernate.orm.service - HHH010455: Adding integrator: org.hibernate.cache.internal.CollectionCacheInvalidator
+2026-01-31 01:48:47.789 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
+2026-01-31 01:48:47.790 [main] DEBUG org.hibernate.orm.core - HHH000206: 'hibernate.properties' not found
+2026-01-31 01:48:47.829 [main] WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2026-01-31 01:48:47.838 [main] DEBUG org.hibernate.orm.boot - HHH160204: cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2026-01-31 01:48:48.120 [main] WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+2026-01-31 01:48:48.121 [main] DEBUG org.hibernate.orm.boot - HHH160204: cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2026-01-31 01:48:48.168 [main] DEBUG org.hibernate.orm.cache - HHH90001031: Cannot default RegionFactory since no RegionFactory strategies were registered
+2026-01-31 01:48:48.170 [main] DEBUG org.hibernate.orm.cache - HHH90001029: Second-level cache disabled
+2026-01-31 01:48:48.604 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-01-31 01:48:49.166 [main] DEBUG org.hibernate.orm.connections.pooling - HHH10001014: Initializing connection pool with 1 connections
+2026-01-31 01:48:49.543 [main] DEBUG org.hibernate.orm.jdbc - HHH100017: Database:
+	name: PostgreSQL
+	version: 18.1
+	major: 18
+	minor: 1
+2026-01-31 01:48:49.544 [main] DEBUG org.hibernate.orm.jdbc - HHH100018: Driver:
+	name: PostgreSQL JDBC Driver
+	version: 42.7.9
+	major: 42
+	minor: 7
+	JDBC version: 4.2
