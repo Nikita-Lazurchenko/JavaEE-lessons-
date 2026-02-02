@@ -12,10 +12,12 @@
         <property name="connection.password">787898</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
-        <mapping class="org.example.entity.User"/>
-        <mapping class="org.example.entity.Company"/>
-        <mapping class="org.example.entity.Profile"/>
-        <mapping class="org.example.entity.Chat"/>
+        <mapping class="org.example.entity.Student"/>
+        <mapping class="org.example.entity.StudentProfile"/>
+        <mapping class="org.example.entity.Course"/>
+        <mapping class="org.example.entity.TrainerCourse"/>
+        <mapping class="org.example.entity.Trainer"/>
+
     </session-factory>
 
 </hibernate-configuration>

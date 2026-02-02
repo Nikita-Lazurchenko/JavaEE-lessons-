@@ -1,155 +1,111 @@
-2026-01-31 00:48:10.331 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema actions specified for contributor 'orm'
-2026-01-31 00:48:10.358 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema management actions found
-2026-01-31 00:48:10.360 [main] DEBUG org.hibernate.orm.factoryRegistry - HHH020384: Registering SessionFactory [f1d4762b-f3dd-4334-b901-0094375955b3] (<unnamed>)
-2026-01-31 00:48:10.360 [main] DEBUG org.hibernate.orm.core - HHH006588: Opening session [tenant=null]
-2026-01-31 00:48:10.417 [main] DEBUG org.hibernate.orm.core - HHH006583: Beginning transaction
-2026-01-31 00:48:10.474 [main] DEBUG org.hibernate.SQL - 
-    SELECT
-        * 
-    FROM
-        users
-2026-01-31 00:48:10.508 [main] DEBUG org.hibernate.orm.results - Disallowing positional selections: SELECT * FROM users
-2026-01-31 00:48:10.567 [main] DEBUG org.hibernate.SQL - 
+2026-02-02 14:39:10.103 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.TrainerCourse.course' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-02-02 14:39:10.122 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.TrainerCourse.trainer' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-02-02 14:39:10.122 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.TrainerCourse.trainer' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-02-02 14:39:10.134 [main] DEBUG org.hibernate.orm.core - HHH000513: Unable to create the ReflectionOptimizer for [org.example.entity.TrainerCourse]: private accessor [course]
+2026-02-02 14:39:10.135 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.TrainerCourse.course' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-02-02 14:39:10.135 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.TrainerCourse.trainer' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-02-02 14:39:10.442 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-02-02 14:39:10.451 [main] DEBUG org.hibernate.orm.service - HHH010454: EventListenerRegistry access via ServiceRegistry is deprecated - use 'sessionFactory.getEventEngine().getListenerRegistry()' instead
+2026-02-02 14:39:10.453 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema actions specified for contributor 'orm'
+2026-02-02 14:39:10.454 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema management actions found
+2026-02-02 14:39:10.455 [main] DEBUG org.hibernate.orm.factoryRegistry - HHH020384: Registering SessionFactory [638bc375-aa87-458a-94c5-10dc45a51dea] (<unnamed>)
+2026-02-02 14:39:10.455 [main] DEBUG org.hibernate.orm.core - HHH006588: Opening session [tenant=null]
+2026-02-02 14:39:10.506 [main] DEBUG org.hibernate.orm.core - HHH006583: Beginning transaction
+2026-02-02 14:39:10.532 [main] DEBUG org.hibernate.SQL - 
     select
-        p1_0.user_id,
-        p1_0.language,
-        p1_0.street,
-        u1_0.id,
-        u1_0.company_id,
-        u1_0.birthday,
-        u1_0.firstName,
-        u1_0.lastName,
-        u1_0.role,
-        u1_0.username 
+        c1_0.id,
+        c1_0.course_name 
     from
-        public.profile p1_0 
-    left join
-        public.users u1_0 
-            on u1_0.id=p1_0.user_id 
+        public.courses c1_0 
     where
-        p1_0.user_id=?
-2026-01-31 00:48:10.584 [main] DEBUG org.hibernate.SQL - 
-    select
-        p1_0.user_id,
-        p1_0.language,
-        p1_0.street,
-        u1_0.id,
-        u1_0.company_id,
-        u1_0.birthday,
-        u1_0.firstName,
-        u1_0.lastName,
-        u1_0.role,
-        u1_0.username 
-    from
-        public.profile p1_0 
-    left join
-        public.users u1_0 
-            on u1_0.id=p1_0.user_id 
-    where
-        p1_0.user_id=?
-2026-01-31 00:48:10.585 [main] DEBUG org.hibernate.SQL - 
-    select
-        p1_0.user_id,
-        p1_0.language,
-        p1_0.street,
-        u1_0.id,
-        u1_0.company_id,
-        u1_0.birthday,
-        u1_0.firstName,
-        u1_0.lastName,
-        u1_0.role,
-        u1_0.username 
-    from
-        public.profile p1_0 
-    left join
-        public.users u1_0 
-            on u1_0.id=p1_0.user_id 
-    where
-        p1_0.user_id=?
-2026-01-31 00:48:10.599 [main] DEBUG org.hibernate.orm.core - HHH006584: Committing transaction
-2026-01-31 00:48:10.606 [main] DEBUG org.hibernate.orm.event - HHH90060071: Flushed: 3 insertions, 0 updates, 0 deletions to 6 objects
-2026-01-31 00:48:10.606 [main] DEBUG org.hibernate.orm.event - HHH90060072: Flushed: 0 (re)creations, 0 updates, 0 removals to 0 collections
-2026-01-31 00:48:10.607 [main] DEBUG org.hibernate.orm.core - Listing entities:
-2026-01-31 00:48:10.609 [main] DEBUG org.hibernate.orm.core - org.example.entity.Profile{street=Свободы 67, language=ML, id=3, user=null}
-2026-01-31 00:48:10.609 [main] DEBUG org.hibernate.orm.core - org.example.entity.Profile{street=Независимости 34, language=UA, id=4, user=null}
-2026-01-31 00:48:10.610 [main] DEBUG org.hibernate.orm.core - org.example.entity.User{personalInfo=component[birthday,firstName,lastName]{birthday=Birthday[birthday=1978-02-23], firstName=Andrey, lastName=Petrov}, role=USER, profile=null, company=<uninitialized>, id=3, username=example@gmail.com}
-2026-01-31 00:48:10.611 [main] DEBUG org.hibernate.orm.core - org.example.entity.User{personalInfo=component[birthday,firstName,lastName]{birthday=Birthday[birthday=1986-04-12], firstName=Charlies, lastName=Calthrop}, role=USER, profile=null, company=<uninitialized>, id=4, username=spanish@gmail.com}
-2026-01-31 00:48:10.611 [main] DEBUG org.hibernate.orm.core - org.example.entity.Profile{street=Мира 14, language=RU, id=2, user=null}
-2026-01-31 00:48:10.611 [main] DEBUG org.hibernate.orm.core - org.example.entity.User{personalInfo=component[birthday,firstName,lastName]{birthday=Birthday[birthday=1988-07-12], firstName=Anton, lastName=Ivanov}, role=USER, profile=null, company=<uninitialized>, id=2, username=poshta@gmail.com}
-2026-01-31 00:48:10.621 [main] DEBUG org.hibernate.SQL - 
+        c1_0.id=?
+2026-02-02 14:39:10.591 [main] DEBUG org.hibernate.SQL - 
     insert 
     into
-        public.profile
-        (language, street, user_id) 
+        public.trainer_course
+        (course_id, trainer_id) 
     values
-        (?, ?, ?)
-2026-01-31 00:48:10.633 [main] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        public.profile
-        (language, street, user_id) 
-    values
-        (?, ?, ?)
-2026-01-31 00:48:10.634 [main] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        public.profile
-        (language, street, user_id) 
-    values
-        (?, ?, ?)
-2026-01-31 00:48:10.641 [main] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
-	39300 ns acquiring 1 JDBC connections
-	30300 ns releasing 1 JDBC connections
-	3913500 ns preparing 7 JDBC statements
-	25269200 ns executing 7 JDBC statements
+        (?, ?)
+2026-02-02 14:39:10.603 [main] WARN  org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 0, SQLState: 23502
+2026-02-02 14:39:10.603 [main] WARN  org.hibernate.orm.jdbc.error - ОШИБКА: null value in column "trainer_id" of relation "trainer_course" violates not-null constraint
+  Подробности: Failing row contains (1, 2, null).
+2026-02-02 14:39:10.603 [main] DEBUG org.hibernate.orm.jdbc.error - could not execute statement [insert into public.trainer_course (course_id,trainer_id) values (?,?)]
+org.postgresql.util.PSQLException: ОШИБКА: null value in column "trainer_id" of relation "trainer_course" violates not-null constraint
+  Подробности: Failing row contains (1, 2, null).
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2846)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2531)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:429)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:526)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:436)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:196)
+	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:157)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:181)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performMutation(GetGeneratedKeysDelegate.java:103)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorSingleNonBatched.performNonBatchedOperations(MutationExecutorSingleNonBatched.java:45)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:66)
+	at org.hibernate.engine.jdbc.mutation.internal.AbstractMutationExecutor.execute(AbstractMutationExecutor.java:55)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.doStaticInserts(InsertCoordinatorStandard.java:180)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.coordinateInsert(InsertCoordinatorStandard.java:120)
+	at org.hibernate.persister.entity.mutation.InsertCoordinatorStandard.insert(InsertCoordinatorStandard.java:84)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:85)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:667)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:270)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:371)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:285)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:215)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:133)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:144)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:91)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:75)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:51)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:693)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:676)
+	at org.example.HibernateRunnerTest.addTrainerAndCourse(HibernateRunnerTest.java:29)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2026-02-02 14:39:10.613 [main] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	38500 ns acquiring 1 JDBC connections
+	0 ns releasing 0 JDBC connections
+	3077200 ns preparing 2 JDBC statements
+	24282000 ns executing 2 JDBC statements
 	0 ns executing 0 JDBC batches
 	0 ns performing 0 second-level cache puts
 	0 ns performing 0 second-level cache hits
 	0 ns performing 0 second-level cache misses
-	35298100 ns executing 1 flushes (flushing a total of 6 entities and 0 collections)
+	0 ns executing 0 flushes (flushing a total of 0 entities and 0 collections)
 	0 ns executing 0 pre-partial-flushes
-	325200 ns executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
+	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
 
-2026-01-31 00:48:10.641 [main] DEBUG org.hibernate.orm.factory - HHH90020005: Closing factory [f1d4762b-f3dd-4334-b901-0094375955b3]
-2026-01-31 00:48:10.642 [main] DEBUG org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/postgres]
-2026-01-31 00:54:10.669 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
-2026-01-31 00:54:10.692 [main] DEBUG org.hibernate.orm.service - HHH010455: Adding integrator: org.hibernate.boot.beanvalidation.BeanValidationIntegrator
-2026-01-31 00:54:10.698 [main] DEBUG org.hibernate.orm.service - HHH010455: Adding integrator: org.hibernate.cache.internal.CollectionCacheInvalidator
-2026-01-31 00:54:10.723 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1
-2026-01-31 00:54:10.724 [main] DEBUG org.hibernate.orm.core - HHH000206: 'hibernate.properties' not found
-2026-01-31 00:54:10.766 [main] WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2026-01-31 00:54:10.777 [main] DEBUG org.hibernate.orm.boot - HHH160204: cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
-2026-01-31 00:54:11.072 [main] WARN  org.hibernate.orm.deprecation - HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
-2026-01-31 00:54:11.074 [main] DEBUG org.hibernate.orm.boot - HHH160204: cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
-2026-01-31 00:54:11.129 [main] DEBUG org.hibernate.orm.cache - HHH90001031: Cannot default RegionFactory since no RegionFactory strategies were registered
-2026-01-31 00:54:11.130 [main] DEBUG org.hibernate.orm.cache - HHH90001029: Second-level cache disabled
-2026-01-31 00:54:11.573 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
-2026-01-31 00:54:12.148 [main] DEBUG org.hibernate.orm.connections.pooling - HHH10001014: Initializing connection pool with 1 connections
-2026-01-31 00:54:12.512 [main] DEBUG org.hibernate.orm.jdbc - HHH100017: Database:
-	name: PostgreSQL
-	version: 18.1
-	major: 18
-	minor: 1
-2026-01-31 00:54:12.512 [main] DEBUG org.hibernate.orm.jdbc - HHH100018: Driver:
-	name: PostgreSQL JDBC Driver
-	version: 42.7.9
-	major: 42
-	minor: 7
-	JDBC version: 4.2
-2026-01-31 00:54:12.569 [main] DEBUG org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.PostgreSQLDialect, version: 18.1
-2026-01-31 00:54:12.604 [main] DEBUG org.hibernate.orm.jdbc.lob - HHH10010004: Disabling contextual LOB creation as Dialect reported it is not supported
-2026-01-31 00:54:12.605 [main] DEBUG org.hibernate.orm.jdbc - HHH100122: Using default JDBC fetch size: 0
-2026-01-31 00:54:12.607 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:postgresql://localhost:5432/postgres]
-	Database driver: PostgreSQL JDBC Driver
-	Database dialect: PostgreSQLDialect
-	Database version: 18.1
-	Default catalog/schema: postgres/public
-	Autocommit mode: false
-	Isolation level: READ_COMMITTED
-	JDBC fetch size: none
-	Pool: DriverManagerConnectionProvider
-	Minimum pool size: 1
-	Maximum pool size: 20
-2026-01-31 00:54:13.303 [main] DEBUG org.hibernate.orm.factory - HHH90020001: Instantiating factory [c44426cf-a8eb-4b56-960d-0ab471aad1aa] with settings: {hibernate.format_sql=true, java.specification.version=23, sun.cpu.isalist=amd64, sun.jnu.encoding=Cp1251, java.class.path=C:\IntelliJ IDEA 2024.3\lib\idea_rt.jar;C:\IntelliJ IDEA 2024.3\plugins\junit\lib\junit5-rt.jar;C:\IntelliJ IDEA 2024.3\plugins\junit\lib\junit-rt.jar;E:\JavaEE(lessons)\Hibernate_lesson\target\test-classes;E:\JavaEE(lessons)\Hibernate_lesson\target\classes;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.11.2\junit-jupiter-api-5.11.2.jar;C:\Users\Admin\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-commons\1.11.2\junit-platform-commons-1.11.2.jar;C:\Users\Admin\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter\6.1.0-M1\junit-jupiter-6.1.0-M1.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-params\6.1.0-M1\junit-jupiter-params-6.1.0-M1.jar;C:\Users\Admin\.m2\repository\org\jspecify\jspecify\1.0.0\jspecify-1.0.0.jar;C:\Users\Admin\.m2\repository\org\junit\jupiter\junit-jupiter-engine\6.1.0-M1\junit-jupiter-engine-6.1.0-M1.jar;C:\Users\Admin\.m2\repository\org\junit\platform\junit-platform-engine\6.1.0-M1\junit-platform-engine-6.1.0-M1.jar;C:\Users\Admin\.m2\repository\org\hibernate\orm\hibernate-core\7.3.0.CR1\hibernate-core-7.3.0.CR1.jar;C:\Users\Admin\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.2.0\jakarta.persistence-api-3.2.0.jar;C:\Users\Admin\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Admin\.m2\repository\org\jboss\logging\jboss-logging\3.6.1.Final\jboss-logging-3.6.1.Final.jar;C:\Users\Admin\.m2\repository\org\hibernate\models\hibernate-models\1.0.1\hibernate-models-1.0.1.jar;C:\Users\Admin\.m2\repository\net\bytebuddy\byte-buddy\1.17.8\byte-buddy-1.17.8.jar;C:\Users\Admin\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.4\jakarta.xml.bind-api-4.0.4.jar;C:\Users\Admin\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.4\jakarta.activation-api-2.1.4.jar;C:\Users\Admin\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.6\jaxb-runtime-4.0.6.jar;C:\Users\Admin\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.6\jaxb-core-4.0.6.jar;C:\Users\Admin\.m2\repository\org\eclipse\angus\angus-activation\2.0.3\angus-activation-2.0.3.jar;C:\Users\Admin\.m2\repository\org\glassfish\jaxb\txw2\4.0.6\txw2-4.0.6.jar;C:\Users\Admin\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Admin\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Admin\.m2\repository\org\antlr\antlr4-runtime\4.13.2\antlr4-runtime-4.13.2.jar;C:\Users\Admin\.m2\repository\org\postgresql\postgresql\42.7.9\postgresql-42.7.9.jar;C:\Users\Admin\.m2\repository\org\checkerframework\checker-qual\3.52.0\checker-qual-3.52.0.jar;C:\Users\Admin\.m2\repository\org\projectlombok\lombok\1.18.42\lombok-1.18.42.jar;C:\Users\Admin\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-slf4j2-impl\2.25.3\log4j-slf4j2-impl-2.25.3.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-api\2.25.3\log4j-api-2.25.3.jar;C:\Users\Admin\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-core\2.25.3\log4j-core-2.25.3.jar, kotlinx.coroutines.debug.enable.mutable.state.flows.stack.trace=true, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, idea.test.cyclic.buffer.size=1048576, user.variant=, java.vendor.url=https://java.oracle.com/, user.timezone=Europe/Moscow, java.vm.specification.version=23, os.name=Windows 10, sun.java.launcher=SUN_STANDARD, user.country=RU, sun.boot.library.path=C:\Program Files\Java\jdk-23\bin, sun.java.command=com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit4 org.example.HibernateRunnerTest,checkOneToOne, jdk.debug=release, sun.cpu.endian=little, user.home=C:\Users\Admin, user.language=ru, sun.stderr.encoding=UTF-8, java.specification.vendor=Oracle Corporation, java.version.date=2024-10-15, java.home=C:\Program Files\Java\jdk-23, file.separator=\, java.vm.compressedOopsMode=Zero based, sun.stdout.encoding=UTF-8, line.separator=
-, java.specification.name=Java Platform API Specification, java.vm.specification.vendor=Oracle Corporation, intellij.debug.agent=true, user.script=, connection.password=787898, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=23.0.1+11-39, user.name=Admin, stdout.encoding=UTF-8, path.separator=;, kotlinx.coroutines.debug.enable.creation.stack.trace=false, hibernate.connection.username=****, os.version=10.0, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:postgresql://localhost:5432/postgres, file.encoding=UTF-8, format_sql=true, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, show_sql=true, hibernate.connection.driver_class=org.postgresql.Driver, java.vendor.url.bug=https://bugreport.java.com/bugreport/, java.io.tmpdir=C:\Users\Admin\AppData\Local\Temp\, java.version=23.0.1, jboss.modules.system.pkgs=com.intellij.rt, user.dir=E:\JavaEE(lessons)\Hibernate_lesson, os.arch=amd64, connection.username=postgres, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, sun.os.patch.level=, connection.driver_class=org.postgresql.Driver, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@2921a36a, native.encoding=Cp1251, kotlinx.coroutines.debug.enable.flows.stack.trace=true, java.library.path=C:\Program Files\Java\jdk-23\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk-23\bin;C:\Program Files\Git\cmd;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\Program Files\apache-maven-3.9.12\bin;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\IntelliJ IDEA 2024.3\bin;;C:\Users\Admin\AppData\Local\Microsoft\WinGet\Packages\yuccastream.tuna_Microsoft.Winget.Source_8wekyb3d8bbwe;C:\Program Files\apache-maven-3.9.12\bin\;;., stderr.encoding=UTF-8, java.vendor=Oracle Corporation, java.vm.info=mixed mode, sharing, java.vm.version=23.0.1+11-39, java.rmi.server.randomIDs=true, sun.io.unicode.encoding=UnicodeLittle, connection.url=jdbc:postgresql://localhost:5432/postgres, java.class.version=67.0, debugger.agent.enable.coroutines=true}
+2026-02-02 14:39:10.616 [main] DEBUG org.hibernate.orm.collection - HHH90030006: Detaching an uninitialized collection with queued operations from a session due to rollback: [org.example.entity.Course.trainerCourses with owner id '2']
+2026-02-02 14:39:10.616 [main] DEBUG org.hibernate.orm.factory - HHH90020005: Closing factory [638bc375-aa87-458a-94c5-10dc45a51dea]
+2026-02-02 14:39:10.617 [main] DEBUG org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/postgres]
+2026-02-02 14:42:35.997 [main] DEBUG org.jboss.logging - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+2026-02-02 14:42:36.020 [main] DEBUG org.hibernate.orm.service - HHH010455: Adding integrator: org.hibernate.boot.beanvalidation.BeanValidationIntegrator
+2026-02-02 14:42:36.025 [main] DEBUG org.hibernate.orm.service - HHH010455: Adding integrator: org.hibernate.cache.internal.CollectionCacheInvalidator
+2026-02-02 14:42:36.053 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.3.0.CR1

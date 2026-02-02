@@ -10,20 +10,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @Entity
-@Table(schema = "public", name = "chat")
-public class Chat {
+@Table(schema = "public", name ="trainers")
+public class Trainer{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false , unique = true)
-    private String name;
+    @Column(name = "first_name", nullable = false)
+    private String firstName;
+
+    @Column(name = "last_name", nullable = false)
+    private String lastName;
+
+    private String experience;
 
     @Builder.Default
-    @ManyToMany(mappedBy = "chats")
-    private List<User> users = new ArrayList<>();
+    @OneToMany(mappedBy = "trainer")
+    private List<TrainerCourse> trainerCourses = new ArrayList<>();
 }

@@ -1,5 +1,5 @@
-2026-01-31 00:48:09.424 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema actions specified for contributor 'orm'
-2026-01-31 00:48:09.570 [main] DEBUG org.hibernate.HQL_FUNCTIONS - Available HQL Functions:
+2026-02-02 14:39:09.478 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema actions specified for contributor 'orm'
+2026-02-02 14:39:09.628 [main] DEBUG org.hibernate.HQL_FUNCTIONS - Available HQL Functions:
 	abs(NUMERIC arg)
 	Double acos(NUMERIC arg)
 	Double acosh(NUMERIC arg)
@@ -211,14 +211,14 @@
 	String xmlpi( ... )
 	String xmlquery( ... )
 
-2026-01-31 00:48:09.957 [main] DEBUG org.hibernate.orm.core - HHH000513: Unable to create the ReflectionOptimizer for [org.example.entity.Company]: private accessor [name]
-2026-01-31 00:48:09.969 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.User.profile' was mapped with LAZY + NO_PROXY but the class was not enhanced
-2026-01-31 00:48:09.970 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.User.profile' was mapped with LAZY + NO_PROXY but the class was not enhanced
-2026-01-31 00:48:09.991 [main] DEBUG org.hibernate.orm.core - HHH000513: Unable to create the ReflectionOptimizer for [org.example.entity.User]: private accessor [company]
-2026-01-31 00:48:09.991 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.User.profile' was mapped with LAZY + NO_PROXY but the class was not enhanced
-2026-01-31 00:48:09.993 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.Profile.user' was mapped with LAZY + NO_PROXY but the class was not enhanced
-2026-01-31 00:48:09.993 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.Profile.user' was mapped with LAZY + NO_PROXY but the class was not enhanced
-2026-01-31 00:48:10.007 [main] DEBUG org.hibernate.orm.core - HHH000513: Unable to create the ReflectionOptimizer for [org.example.entity.Profile]: private accessor [language]
-2026-01-31 00:48:10.007 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.Profile.user' was mapped with LAZY + NO_PROXY but the class was not enhanced
-2026-01-31 00:48:10.318 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-31 00:48:10.329 [main] DEBUG org.hibernate.orm.service - HHH010454: EventListenerRegistry access via ServiceRegistry is deprecated - use 'sessionFactory.getEventEngine().getListenerRegistry()' instead
+2026-02-02 14:39:10.032 [main] DEBUG org.hibernate.orm.core - HHH000513: Unable to create the ReflectionOptimizer for [org.example.entity.Trainer]: private accessor [experience]
+2026-02-02 14:39:10.042 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.StudentProfile.student' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-02-02 14:39:10.042 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.StudentProfile.student' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-02-02 14:39:10.059 [main] DEBUG org.hibernate.orm.core - HHH000513: Unable to create the ReflectionOptimizer for [org.example.entity.StudentProfile]: private accessor [progress]
+2026-02-02 14:39:10.059 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.StudentProfile.student' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-02-02 14:39:10.060 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.Student.studentProfile' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-02-02 14:39:10.060 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.Student.studentProfile' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-02-02 14:39:10.085 [main] DEBUG org.hibernate.orm.core - HHH000513: Unable to create the ReflectionOptimizer for [org.example.entity.Student]: private accessor [course]
+2026-02-02 14:39:10.086 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.Student.studentProfile' was mapped with LAZY + NO_PROXY but the class was not enhanced
+2026-02-02 14:39:10.102 [main] DEBUG org.hibernate.orm.core - HHH000513: Unable to create the ReflectionOptimizer for [org.example.entity.Course]: private accessor [courseName]
+2026-02-02 14:39:10.103 [main] DEBUG org.hibernate.orm.bytecode.interceptor - HHH90005905: To-one property 'org.example.entity.TrainerCourse.course' was mapped with LAZY + NO_PROXY but the class was not enhanced
