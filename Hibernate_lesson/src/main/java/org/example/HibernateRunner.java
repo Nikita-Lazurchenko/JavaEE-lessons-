@@ -14,29 +14,5 @@ public class HibernateRunner {
     private static final Logger log = LoggerFactory.getLogger(HibernateRunner.class);
 
     public static void main(String[] args) {
-        Company company = Company.builder()
-                .name("Apple")
-                .build();
-        User user = User.builder()
-                .username("example@gmail.com")
-                .personalInfo(PersonalInfo.builder()
-                        .firstName("Andrey")
-                        .lastName("Petrov")
-                        .birthday(new Birthday(LocalDate.of(1978,2,23)))
-                        .build())
-                .role(Role.USER)
-                .company(company)
-                .build();
-
-        try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()){
-            try(Session session1 = sessionFactory.openSession()){
-                session1.beginTransaction();
-
-                session1.persist(user);
-
-                session1.getTransaction().commit();
-            }
-        }
-
     }
 }

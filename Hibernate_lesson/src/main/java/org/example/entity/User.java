@@ -14,6 +14,7 @@ import java.util.List;
 @Builder
 @Entity
 @Table(name = "users", schema = "public")
+//@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +24,7 @@ public class User {
     private PersonalInfo personalInfo;
     @Enumerated(EnumType.STRING)
     private Role role;
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="company_id")
     private Company company;
 

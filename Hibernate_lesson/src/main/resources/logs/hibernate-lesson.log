@@ -1,29 +1,40 @@
-2026-01-31 01:51:58.859 [main] DEBUG org.hibernate.orm.service - HHH010454: EventListenerRegistry access via ServiceRegistry is deprecated - use 'sessionFactory.getEventEngine().getListenerRegistry()' instead
-2026-01-31 01:51:58.882 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema actions specified for contributor 'orm'
-2026-01-31 01:51:58.883 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema management actions found
-2026-01-31 01:51:58.884 [main] DEBUG org.hibernate.orm.factoryRegistry - HHH020384: Registering SessionFactory [edca1cda-6705-4e24-963e-35011f0d428c] (<unnamed>)
-2026-01-31 01:51:58.884 [main] DEBUG org.hibernate.orm.core - HHH006588: Opening session [tenant=null]
-2026-01-31 01:51:58.936 [main] DEBUG org.hibernate.orm.core - HHH006583: Beginning transaction
-2026-01-31 01:51:58.971 [main] DEBUG org.hibernate.SQL - 
+2026-02-03 22:41:35.694 [main] DEBUG org.hibernate.orm.service - HHH010454: EventListenerRegistry access via ServiceRegistry is deprecated - use 'sessionFactory.getEventEngine().getListenerRegistry()' instead
+2026-02-03 22:41:35.713 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema actions specified for contributor 'orm'
+2026-02-03 22:41:35.713 [main] DEBUG org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator - No schema management actions found
+2026-02-03 22:41:35.714 [main] DEBUG org.hibernate.orm.factoryRegistry - HHH020384: Registering SessionFactory [688db054-abab-40a6-b1b8-2f1b8a1f3ca5] (<unnamed>)
+2026-02-03 22:41:35.715 [main] DEBUG org.hibernate.orm.core - HHH006588: Opening session [tenant=null]
+2026-02-03 22:41:35.764 [main] DEBUG org.hibernate.orm.core - HHH006583: Beginning transaction
+2026-02-03 22:41:36.239 [main] DEBUG org.hibernate.SQL - 
     select
         u1_0.id,
         u1_0.company_id,
         u1_0.birthday,
         u1_0.firstName,
         u1_0.lastName,
-        p1_0.id,
-        p1_0.language,
-        p1_0.street,
         u1_0.role,
         u1_0.username 
     from
-        public.users u1_0 
-    left join
+        public.users u1_0
+2026-02-03 22:41:36.320 [main] DEBUG org.hibernate.SQL - 
+    select
+        p1_0.id,
+        p1_0.language,
+        p1_0.street,
+        u1_0.id,
+        u1_0.company_id,
+        u1_0.birthday,
+        u1_0.firstName,
+        u1_0.lastName,
+        u1_0.role,
+        u1_0.username 
+    from
         public.profile p1_0 
+    left join
+        public.users u1_0 
             on u1_0.id=p1_0.user_id 
     where
-        u1_0.id=?
-2026-01-31 01:51:59.035 [main] DEBUG org.hibernate.SQL - 
+        p1_0.user_id=?
+2026-02-03 22:41:36.336 [main] DEBUG org.hibernate.SQL - 
     select
         c1_0.user_id,
         c1_1.id,
@@ -35,39 +46,23 @@
             on c1_1.id=c1_0.chat_id 
     where
         c1_0.user_id=?
-2026-01-31 01:51:59.068 [main] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        public.chat
-        (name) 
-    values
-        (?)
-2026-01-31 01:51:59.086 [main] DEBUG org.hibernate.orm.core - HHH006584: Committing transaction
-2026-01-31 01:51:59.096 [main] DEBUG org.hibernate.orm.event - HHH90060071: Flushed: 0 insertions, 0 updates, 0 deletions to 3 objects
-2026-01-31 01:51:59.096 [main] DEBUG org.hibernate.orm.event - HHH90060072: Flushed: 1 (re)creations, 1 updates, 0 removals to 2 collections
-2026-01-31 01:51:59.097 [main] DEBUG org.hibernate.orm.core - Listing entities:
-2026-01-31 01:51:59.099 [main] DEBUG org.hibernate.orm.core - org.example.entity.Chat{name=worksChat, id=1, users=[org.example.entity.User#3]}
-2026-01-31 01:51:59.100 [main] DEBUG org.hibernate.orm.core - org.example.entity.User{personalInfo=component[birthday,firstName,lastName]{birthday=Birthday[birthday=1978-02-23], firstName=Andrey, lastName=Petrov}, role=USER, profile=org.example.entity.Profile#2, chats=[org.example.entity.Chat#1], company=<uninitialized>, id=3, username=example@gmail.com}
-2026-01-31 01:51:59.101 [main] DEBUG org.hibernate.orm.core - org.example.entity.Profile{street=Свободы 67, language=ML, id=2, user=org.example.entity.User#3}
-2026-01-31 01:51:59.105 [main] DEBUG org.hibernate.SQL - 
-    insert 
-    into
-        users_chat
-        (user_id, chat_id) 
-    values
-        (?, ?)
-2026-01-31 01:51:59.132 [main] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
-	36300 ns acquiring 1 JDBC connections
-	35800 ns releasing 1 JDBC connections
-	3549700 ns preparing 4 JDBC statements
-	35414600 ns executing 4 JDBC statements
+2026-02-03 22:41:36.346 [main] DEBUG org.hibernate.orm.core - HHH006584: Committing transaction
+2026-02-03 22:41:36.356 [main] DEBUG org.hibernate.orm.event - HHH90060071: Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2026-02-03 22:41:36.356 [main] DEBUG org.hibernate.orm.event - HHH90060072: Flushed: 0 (re)creations, 0 updates, 0 removals to 1 collections
+2026-02-03 22:41:36.356 [main] DEBUG org.hibernate.orm.core - Listing entities:
+2026-02-03 22:41:36.358 [main] DEBUG org.hibernate.orm.core - org.example.entity.User{personalInfo=component[birthday,firstName,lastName]{birthday=Birthday[birthday=1970-01-01], firstName=Nikita, lastName=Lazurchenko}, role=USER, profile=null, chats=[], company=<uninitialized>, id=1, username=admin}
+2026-02-03 22:41:36.361 [main] DEBUG org.hibernate.session.metrics - HHH000401: Logging session metrics:
+	35300 ns acquiring 1 JDBC connections
+	28800 ns releasing 1 JDBC connections
+	3584200 ns preparing 3 JDBC statements
+	14288700 ns executing 3 JDBC statements
 	0 ns executing 0 JDBC batches
 	0 ns performing 0 second-level cache puts
 	0 ns performing 0 second-level cache hits
 	0 ns performing 0 second-level cache misses
-	24701900 ns executing 1 flushes (flushing a total of 3 entities and 2 collections)
-	0 ns executing 0 pre-partial-flushes
-	0 ns executing 0 partial-flushes (flushing a total of 0 entities and 0 collections)
+	11948000 ns executing 1 flushes (flushing a total of 1 entities and 1 collections)
+	301200 ns executing 1 pre-partial-flushes
+	246100 ns executing 1 partial-flushes (flushing a total of 0 entities and 0 collections)
 
-2026-01-31 01:51:59.133 [main] DEBUG org.hibernate.orm.factory - HHH90020005: Closing factory [edca1cda-6705-4e24-963e-35011f0d428c]
-2026-01-31 01:51:59.134 [main] DEBUG org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/postgres]
+2026-02-03 22:41:36.361 [main] DEBUG org.hibernate.orm.factory - HHH90020005: Closing factory [688db054-abab-40a6-b1b8-2f1b8a1f3ca5]
+2026-02-03 22:41:36.362 [main] DEBUG org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5432/postgres]

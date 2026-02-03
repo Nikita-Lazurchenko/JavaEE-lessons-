@@ -15,10 +15,10 @@ import java.util.List;
 @Builder
 @Entity
 @Table(schema = "public", name = "chat")
-public class Chat {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+public class Chat extends BaseEntity<Long> {
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
 
     @Column(nullable = false , unique = true)
     private String name;
